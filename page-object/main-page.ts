@@ -1,3 +1,4 @@
+import { expect } from "@playwright/test";
 import { Locator, Page } from "playwright";
 
 export class MainPage {
@@ -19,6 +20,7 @@ export class MainPage {
 
     async clickGetInTouchButton() {
        await this.getInTouchButton.click();
+       await expect(this.page).toHaveURL('/' + 'contact/');
     }
 
     async hoverBookmark(bookmark: string) {

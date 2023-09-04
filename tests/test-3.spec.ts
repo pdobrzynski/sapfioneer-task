@@ -20,7 +20,6 @@ test('Go to Home Page, redirect to contact page, submit empty form and validate 
     await loadHomePage(page);
 
     mainPage.clickGetInTouchButton();
-    await expect(page).toHaveURL('/' + 'contact/');
     await contactPage.clickSubmitForm();
 
     for(const label of validationArray) {
